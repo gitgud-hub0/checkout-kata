@@ -6,6 +6,7 @@ namespace checkout_kata.Entity
 {
     public class ProductInfo
     {
+        //this method initialises all products as different instances of Items class
         public List<Items> GetAllProducts()
         {
             List<Items> productsList = new List<Items>()
