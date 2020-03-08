@@ -20,5 +20,15 @@ namespace checkout_kataTests
             basket.Scan("A99");
             Assert.AreEqual(50, basket.Total());
         }
+
+        [Test]
+        public void ScanTwoItems()
+        {
+            basket.Scan("B15");
+            basket.Scan("A99");
+            Assert.AreEqual(80, basket.Total());
+        }
+
+
     }
 }
