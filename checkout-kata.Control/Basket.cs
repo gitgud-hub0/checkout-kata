@@ -50,13 +50,12 @@ namespace checkout_kata.Control
                 double unitPrice = item.Key.UnitPrice;
                 int requiredDiscountQuantity = item.Key.ItemDiscountQuantity;
                 int itemDiscountPrice = item.Key.ItemDiscountPrice;
+                double discountAppliedAmount = 0;
 
-                if (basketItemQuantity >= requiredDiscountQuantity)
-                {
-                    double discountAppliedAmount = 0;
-                    discountAppliedAmount = (unitPrice * basketItemQuantity) - itemDiscountPrice;
-                    totalDiscounts += discountAppliedAmount;
-                }
+                int discountAppliedCount = basketItemQuantity / requiredDiscountQuantity;
+                discountAppliedAmount = (unitPrice * requiredDiscountQuantity * discountAppliedCount) - discountAppliedCount * itemDiscountPrice;
+                totalDiscounts += discountAppliedAmount;
+
 
             }                
             return TotalPrice - totalDiscounts;
