@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace checkout_kata.Console
+namespace checkout_kata.Boundary
 {
     class Program
     {
