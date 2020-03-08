@@ -5,4 +5,9 @@
     <RootNamespace>checkout_kata.Control</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\checkout-kata.Console\checkout-kata.Boundary.csproj" />
+    <ProjectReference Include="..\checkout-kata.Entity\checkout-kata.Entity.csproj" />
+  </ItemGroup>
+
 </Project>

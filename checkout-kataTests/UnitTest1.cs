@@ -15,7 +15,7 @@ namespace checkout_kataTests
         }
 
         [Test]
-        public void Test1()
+        public void ScanOneApple()
         {
             basket.Scan("A99");
             Assert.AreEqual(50, basket.Total());
