@@ -25,19 +25,28 @@ namespace checkout_kata.Control
        
         public void Scan(string sku)
         {
-            Items item = AllItems.Find(x => x.Sku == sku);
-
-            //if shoppingbasket already has the item then increase quantity by 1, else add the item to the basket   
-            if (ShoppingBasket.ContainsKey(item))
+              
+            try
             {
-                ShoppingBasket[item] += 1; 
-            }
-            else
-            {
-                ShoppingBasket.Add(item,1);
+                Items item = AllItems.Find(x => x.Sku == sku);
+                //if shoppingbasket already has the item then increase quantity by 1, else add the item to the basket 
+                if (ShoppingBasket.ContainsKey(item)) 
+                {
+                    ShoppingBasket[item] += 1;
+                }
+                else
+                {
+                    ShoppingBasket.Add(item, 1);
+                }
+
+                TotalPrice += item.UnitPrice;
+
             }
 
-            TotalPrice += item.UnitPrice;
+            catch (ArgumentNullException e)
+            {
+                Console.WriteLine("{0} Exception caught. Invalid item scanned", e);
+            }
         }
 
         public double Total()

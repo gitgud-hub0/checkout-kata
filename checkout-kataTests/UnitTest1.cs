@@ -73,10 +73,20 @@ namespace checkout_kataTests
             Assert.AreEqual(205, basket.Total());
         }
 
+        //After first hour
+        [Test]
+        public void ScanInvalid()
+        {
+            basket.Scan("A98");
+            Assert.AreEqual(0, basket.Total());
+        }
 
-
-
-
-
+        [Test]
+        public void ScanOneInvalidAndOneApple()
+        {
+            basket.Scan("A98");
+            basket.Scan("A99");
+            Assert.AreEqual(50, basket.Total());
+        }
     }
 }
