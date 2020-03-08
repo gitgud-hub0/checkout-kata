@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "checkout-kata.Boundary", "checkout-kata.Console\checkout-kata.Boundary.csproj", "{4865A24B-FCDC-48D1-A042-8A40DCBCE5BE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "checkout-kata", "checkout-kata\checkout-kata.csproj", "{78E16455-1913-4CB4-A31A-B4E5EB6DB15E}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "checkout-kataTests", "checkout-kataTests\checkout-kataTests.csproj", "{DBF3E4FB-EE1A-4548-B763-37E7FB1D1667}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "checkout-kata.Entity", "checkout-kata.Entity\checkout-kata.Entity.csproj", "{CF3C30AA-16C4-4724-A618-62FA26CE83FC}"
@@ -35,18 +33,6 @@ Global
 		{4865A24B-FCDC-48D1-A042-8A40DCBCE5BE}.Release|x64.Build.0 = Release|Any CPU
 		{4865A24B-FCDC-48D1-A042-8A40DCBCE5BE}.Release|x86.ActiveCfg = Release|Any CPU
 		{4865A24B-FCDC-48D1-A042-8A40DCBCE5BE}.Release|x86.Build.0 = Release|Any CPU
-		{78E16455-1913-4CB4-A31A-B4E5EB6DB15E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{78E16455-1913-4CB4-A31A-B4E5EB6DB15E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{78E16455-1913-4CB4-A31A-B4E5EB6DB15E}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{78E16455-1913-4CB4-A31A-B4E5EB6DB15E}.Debug|x64.Build.0 = Debug|Any CPU
-		{78E16455-1913-4CB4-A31A-B4E5EB6DB15E}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{78E16455-1913-4CB4-A31A-B4E5EB6DB15E}.Debug|x86.Build.0 = Debug|Any CPU
-		{78E16455-1913-4CB4-A31A-B4E5EB6DB15E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{78E16455-1913-4CB4-A31A-B4E5EB6DB15E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{78E16455-1913-4CB4-A31A-B4E5EB6DB15E}.Release|x64.ActiveCfg = Release|Any CPU
-		{78E16455-1913-4CB4-A31A-B4E5EB6DB15E}.Release|x64.Build.0 = Release|Any CPU
-		{78E16455-1913-4CB4-A31A-B4E5EB6DB15E}.Release|x86.ActiveCfg = Release|Any CPU
-		{78E16455-1913-4CB4-A31A-B4E5EB6DB15E}.Release|x86.Build.0 = Release|Any CPU
 		{DBF3E4FB-EE1A-4548-B763-37E7FB1D1667}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DBF3E4FB-EE1A-4548-B763-37E7FB1D1667}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBF3E4FB-EE1A-4548-B763-37E7FB1D1667}.Debug|x64.ActiveCfg = Debug|Any CPU
