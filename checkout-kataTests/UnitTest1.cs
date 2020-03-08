@@ -29,6 +29,18 @@ namespace checkout_kataTests
             Assert.AreEqual(80, basket.Total());
         }
 
+        [Test]
+        public void ScanThreeApplesForDiscounts()
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                basket.Scan("A99");
+            }
+            Assert.AreEqual(130, basket.Total());
+        }
+
+  
+
 
     }
 }
