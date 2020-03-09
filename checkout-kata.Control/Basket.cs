@@ -10,22 +10,20 @@ namespace checkout_kata.Control
         public List<Items> AllItems { get; set; }
 
         //ShoppingBasket as dictionary with item type as key and number of items as value
-        public Dictionary<Items, int> ShoppingBasket { get; set; }
+        public static Dictionary<Items, int> ShoppingBasket { get; set; }
 
-        public double TotalPrice { get; set; }
+
 
         public Basket()
         {
             ProductInfo itemInfo = new ProductInfo();
             AllItems = itemInfo.GetAllProducts();
             ShoppingBasket = new Dictionary<Items,int>();
-            TotalPrice = 0;
         }
 
        
         public void Scan(string sku)
-        {
-              
+        {             
             try
             {
                 Items item = AllItems.Find(x => x.Sku == sku);
@@ -38,36 +36,16 @@ namespace checkout_kata.Control
                 {
                     ShoppingBasket.Add(item, 1);
                 }
-
-                TotalPrice += item.UnitPrice;
-
             }
-
             catch (ArgumentNullException e)
             {
                 Console.WriteLine("{0} Exception caught. Invalid item scanned", e);
             }
         }
 
-        public double Total()
+        public Dictionary<Items, int> GetShoppingBasket()
         {
-            double totalDiscounts = 0;
-
-            foreach (var item in ShoppingBasket)
-            {
-                int basketItemQuantity = item.Value;
-                double unitPrice = item.Key.UnitPrice;
-                int requiredDiscountQuantity = item.Key.ItemDiscountQuantity;
-                int itemDiscountPrice = item.Key.ItemDiscountPrice;
-                double discountAppliedAmount = 0;
-
-                int discountAppliedCount = basketItemQuantity / requiredDiscountQuantity;
-                discountAppliedAmount = (unitPrice * requiredDiscountQuantity * discountAppliedCount) - discountAppliedCount * itemDiscountPrice;
-                totalDiscounts += discountAppliedAmount;
-
-
-            }                
-            return TotalPrice - totalDiscounts;
+            return ShoppingBasket;
         }
     }
 

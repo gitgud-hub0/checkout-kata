@@ -7,18 +7,22 @@ namespace checkout_kataTests
     public class Tests
     {
         Basket basket = new Basket();
+        Checkout checkout = new Checkout();
 
         [SetUp]
         public void Setup()
         {
             basket = new Basket();
+            checkout = new Checkout();
         }
 
         [Test]
         public void ScanOneApple()
         {
+
             basket.Scan("A99");
-            Assert.AreEqual(50, basket.Total());
+
+            Assert.AreEqual(50, checkout.CalculateTotal());
         }
 
         [Test]
@@ -26,7 +30,7 @@ namespace checkout_kataTests
         {
             basket.Scan("B15");
             basket.Scan("A99");
-            Assert.AreEqual(80, basket.Total());
+            Assert.AreEqual(80, checkout.CalculateTotal());
         }
 
         [Test]
@@ -36,7 +40,7 @@ namespace checkout_kataTests
             {
                 basket.Scan("A99");
             }
-            Assert.AreEqual(130, basket.Total());
+            Assert.AreEqual(130, checkout.CalculateTotal());
         }
 
         [Test]
@@ -46,7 +50,7 @@ namespace checkout_kataTests
             {
                 basket.Scan("B15");
             }
-            Assert.AreEqual(45, basket.Total());
+            Assert.AreEqual(45, checkout.CalculateTotal());
         }
 
         [Test]
@@ -56,7 +60,7 @@ namespace checkout_kataTests
             {
                 basket.Scan("A99");
             }
-            Assert.AreEqual(260, basket.Total());
+            Assert.AreEqual(260, checkout.CalculateTotal());
         }
 
         [Test]
@@ -70,7 +74,7 @@ namespace checkout_kataTests
             {
                 basket.Scan("A99");
             }
-            Assert.AreEqual(205, basket.Total());
+            Assert.AreEqual(205, checkout.CalculateTotal());
         }
 
         //After first hour
@@ -78,7 +82,7 @@ namespace checkout_kataTests
         public void ScanInvalid()
         {
             basket.Scan("A98");
-            Assert.AreEqual(0, basket.Total());
+            Assert.AreEqual(0, checkout.CalculateTotal());
         }
 
         [Test]
@@ -86,7 +90,7 @@ namespace checkout_kataTests
         {
             basket.Scan("A98");
             basket.Scan("A99");
-            Assert.AreEqual(50, basket.Total());
+            Assert.AreEqual(50, checkout.CalculateTotal());
         }
     }
 }
