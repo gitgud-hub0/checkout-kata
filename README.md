@@ -26,3 +26,17 @@ The checkout accepts the items in any order, so that if we scan a pack of Biscui
 ## Your task
 
 Please [fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) this repo and implement the above requirements spending no more than 60 minutes. When you've done that please send the url of your solution to your representative..
+
+## Todo list  
+  
+### Single responsibility principle  
+Refactor to split ProductInfo entity class into ProductInfo class (with no discount info) and Discounts class to allow changing discounts without changing ProductInfo class.  
+Maybe split basket class to have a Scan class and an ItemScanned class.  
+
+### Open/Closed Principles  
+Refactor Checkout class to extend from an interface ICheckout to allow different calculations with/without discounts  
+Refactor Items class into Iitems interface which contains no discounts implementation, this allows an ItemsWithDiscounts class to extend from the IItems interface  
+
+### Other  
+Apply any other SOLID principles  
+Find solution to allow many instance of baskets as an input of Checkout.
