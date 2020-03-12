@@ -10,9 +10,9 @@ namespace checkout_kata.Entity
         
         public int ItemDiscountQuantity { get; set; }
 
-        public int ItemDiscountPrice { get; set; }
+        public double ItemDiscountPrice { get; set; }
 
-        public Discounts(string sku, int itemDiscountQuantity, int itemDiscountPrice )
+        public Discounts(string sku, int itemDiscountQuantity, double itemDiscountPrice )
         {
             this.Sku = sku;
             this.ItemDiscountQuantity = itemDiscountQuantity;
