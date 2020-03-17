@@ -37,6 +37,12 @@ Maybe split basket class to have a Scan class and an ItemScanned class.
 Refactor Checkout class to extend from an interface ICheckout to allow different calculations with/without discounts  
 Refactor Items class into Iitems interface which contains no discounts implementation, this allows an ItemsWithDiscounts class to extend from the IItems interface  
 
+### Dependency Inversion  
+Use dependency injection framework to apply dependency inversion principle
+
+### Follow OOP principles  
+Refactor class and method to not use two dots   
+
 ### Other  
 Apply any other SOLID principles  
 Find solution to allow many instance of baskets as an input of Checkout.
