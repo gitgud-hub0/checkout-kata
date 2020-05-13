@@ -8,10 +8,8 @@ namespace checkout_kata.Control
     public class Basket
     {
         public List<Items> AllItems { get; set; }
-
         //ShoppingBasket as dictionary with item type as key and number of items as value
         public static Dictionary<Items, int> ShoppingBasket { get; set; }
-
 
 
         public Basket()

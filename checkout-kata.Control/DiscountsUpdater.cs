@@ -37,10 +37,5 @@ namespace checkout_kata.Control
             }
         }
 
-
-
-  
-
-
     }
 }

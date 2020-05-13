@@ -8,12 +8,14 @@ namespace checkout_kataTests
     {
         Basket basket = new Basket();
         Checkout checkout = new Checkout();
+        DiscountsUpdater discountsUpdater = new DiscountsUpdater();
 
         [SetUp]
         public void Setup()
         {
             basket = new Basket();
             checkout = new Checkout();
+            discountsUpdater = new DiscountsUpdater();
         }
 
         [Test]
@@ -36,6 +38,7 @@ namespace checkout_kataTests
         [Test]
         public void ScanThreeApplesForDiscounts()
         {
+            discountsUpdater.UpdateDiscountsInfo("A99", 3, 130);
             for (int i = 0; i < 3; i++)
             {
                 basket.Scan("A99");
@@ -46,6 +49,7 @@ namespace checkout_kataTests
         [Test]
         public void ScanTwoBiscuits()
         {
+            discountsUpdater.UpdateDiscountsInfo("B15", 2, 45);
             for (int i = 0; i < 2; i++)
             {
                 basket.Scan("B15");
@@ -56,6 +60,8 @@ namespace checkout_kataTests
         [Test]
         public void ScanSixApples()
         {
+            discountsUpdater.UpdateDiscountsInfo("A99", 3, 130);
+           
             for (int i = 0; i < 6; i++)
             {
                 basket.Scan("A99");
@@ -66,6 +72,8 @@ namespace checkout_kataTests
         [Test]
         public void ScanThreeBiscuitsAndThreeApples()
         {
+            discountsUpdater.UpdateDiscountsInfo("A99", 3, 130);
+            discountsUpdater.UpdateDiscountsInfo("B15", 2, 45);
             for (int i = 0; i < 3; i++)
             {
                 basket.Scan("B15");
@@ -92,5 +100,19 @@ namespace checkout_kataTests
             basket.Scan("A99");
             Assert.AreEqual(50, checkout.CalculateTotal());
         }
+
+        [Test]
+        public void AddiscountsandScanThreeApples()
+        {
+            discountsUpdater.UpdateDiscountsInfo("A99", 3, 130);
+
+            for (int i = 0; i < 3; i++)
+            {
+                basket.Scan("A99");
+            }
+            Assert.AreEqual(130, checkout.CalculateTotal());
+        }
+
+
     }
 }

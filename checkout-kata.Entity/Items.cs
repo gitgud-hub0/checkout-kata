@@ -8,8 +8,8 @@ namespace checkout_kata.Entity
     {
         public string Sku { get; set; }
         public double UnitPrice { get; set; }
-        public int ItemDiscountQuantity { get; set; }
-        public int ItemDiscountPrice { get; set; }
+/*        public int ItemDiscountQuantity { get; set; }
+        public int ItemDiscountPrice { get; set; }*/
 
         public Items(string sku, double unitPrice)
         {
@@ -17,13 +17,13 @@ namespace checkout_kata.Entity
             this.UnitPrice = unitPrice;
         }
 
-        public Items(string sku, double unitPrice, int itemDiscountQuantity, int itemDiscountPrice)
+/*        public Items(string sku, double unitPrice, int itemDiscountQuantity, int itemDiscountPrice)
         {
             this.Sku = sku;
             this.UnitPrice = unitPrice;
             this.ItemDiscountQuantity = itemDiscountQuantity;
             this.ItemDiscountPrice = itemDiscountPrice;
 
-        }
+        }*/
     }
 }

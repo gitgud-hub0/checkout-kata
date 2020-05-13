@@ -24,5 +24,7 @@ namespace checkout_kata.Entity
         {
             return DiscountsList;            
         }
+
+        //adddisconts method
     }
 }

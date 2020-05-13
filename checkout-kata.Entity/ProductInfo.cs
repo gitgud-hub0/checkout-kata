@@ -8,8 +8,8 @@ namespace checkout_kata.Entity
     {
         List<Items> productsList = new List<Items>()
         {
-            new Items("A99", 50, 3, 130),
-            new Items("B15", 30, 2, 45),
+            new Items("A99", 50),
+            new Items("B15", 30),
             new Items("C40", 60),
             new Items("T34", 99)
         };
